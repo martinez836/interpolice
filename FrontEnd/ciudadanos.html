@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/scss/style.scss">
+    <title>Ciudadanos</title>
+</head>
+<body>
+    <div class="container-fluid mt-4 p-3 bg-light">
+         <button type="button" class="btn btn-primary " id="btnCrear"><i class="bi bi-person-plus-fill"></i></button>
+         <table class="table table-light table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Apodo</th>
+                    <th scope="col">Fecha Nacimiento</th>
+                    <th scope="col">Planeta Origen</th>
+                    <th scope="col">Planeta Residencia</th>
+                    <th scope="col">Codigo QR</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="miTabla">
+                    
+                </tbody>
+        </table>
+
+        <!-- modal para ingresar los datos -->
+         <div class="modal fade" id="modalCiudadano" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg bg-body-secondary">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Mantenimiento del Aprendiz</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="frmCiudadano">
+                            <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" aria-label="First name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" aria-label="Last name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control" id="apodo" placeholder="Apodo" aria-label="First name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="date" class="form-control" id="fechaNacimiento" placeholder="Fecha Nacimiento" aria-label="Last name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control" id="planetaOrigen" placeholder="Planeta Origen" aria-label="First name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="text" class="form-control" id="planetaResidencia" placeholder="Planeta Residencia" aria-label="Last name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <input type="file" class="form-control" id="foto" placeholder="Foto" aria-label="First name">
+                                </div>
+                                <div class="col-6 p-1">
+                                    <select name="" id="estado">
+                                        <option value="">Seleccione un estado</option>
+                                        <option value="1">Vivo</option>
+                                        <option value="2">Muerto</option>
+                                        <option value="3">Congelado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="module" src="./src/js/ciudadano.js"></script>
+</body>
+</html>
