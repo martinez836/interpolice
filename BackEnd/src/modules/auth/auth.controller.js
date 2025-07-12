@@ -47,8 +47,6 @@ export async function getUserById(req, res) {
 export async function createUser(req, res) {
   try {
     let data = req.body;
-    // Aquí debes añadir validaciones de entrada de datos --- passport-u otra libreria  !!!!!
-
     const result = await createUserDB(data);
     res.status(200).send({
       status: "ok",

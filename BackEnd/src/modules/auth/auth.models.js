@@ -24,8 +24,10 @@ export async function createUserDB(userData) {
     const userNuevo = {
         nombre: userData.nombre,
         email: email,
+        telefono: userData.telefono,
         password: bcrypt.hashSync(password, 11), // Encriptar la contraseña
-        rol: userData.rol
+        rol: userData.rol,
+        estado: userData.estado
     };
 
     const [result] = await dbconn.query("INSERT INTO usuarios SET ?", [userNuevo]);
